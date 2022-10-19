@@ -10,53 +10,6 @@
   font-family: "Lato-Bold";
   src: url("/assets/fonts/Lato-Bold.ttf") format("truetype");
 }
-body header {
-  height: 100px;
-  width: 100%;
-  background-color: #161618;
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid;
-  position: fixed;
-  z-index: 3;
-}
-body header .header-content {
-  margin: 0 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-body header .header-content img {
-  width: 65px;
-}
-body header .header-content svg {
-  fill: #fff;
-}
-body header .menu-links {
-  position: fixed;
-  width: 300px;
-  top: 0;
-  right: -300px;
-  height: 1000%;
-  background-color: #cacad2;
-}
-body header .menu-links > a {
-  margin: 15px;
-  width: 48px;
-  height: 48px;
-  float: right;
-}
-body header .menu-links ul {
-  margin: 150px 0;
-  text-align: center;
-  padding: 0;
-  font-size: 18px;
-}
-body header .menu-links ul li + li {
-  margin-top: 40px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -65,6 +18,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Lato-Regular";
+}
+body .show-tablet,
+body .show-desktop {
+  display: none;
 }
 body .overlay {
   width: 100vw;
@@ -76,53 +33,392 @@ body .overlay {
   left: 0;
   display: none;
 }
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin: 0;
+}
+body .custom-hr {
+  width: 180px;
+  height: 2px;
+  margin: 0;
+  margin-top: 10px;
+  border-color: #bfbc37;
+  background-color: #bfbc37;
+}
 body a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 body ul {
   padding: 0;
+  margin: 0;
 }
 body ul li {
   list-style: none;
 }
 
-body section.hero {
+@media (min-width: 768px) {
+  body .show-tablet {
+    display: block;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato-Regular";
+}
+body .show-tablet,
+body .show-desktop {
+  display: none;
+}
+body .overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin: 0;
+}
+body .custom-hr {
+  width: 180px;
+  height: 2px;
+  margin: 0;
+  margin-top: 10px;
+  border-color: #bfbc37;
+  background-color: #bfbc37;
+}
+body a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+body ul {
+  padding: 0;
+  margin: 0;
+}
+body ul li {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  body .show-tablet {
+    display: block;
+  }
+}
+body section#hero {
   background-image: url("/assets/images/beco-do-batman.webp");
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
 }
-body section.hero::before {
+body section#hero::before {
   width: 100%;
   height: 100%;
   position: absolute;
   content: "";
+  color: #fff;
   background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
 }
-body .destak {
+body section#hero .destak {
   height: calc(100vh - 100px);
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   width: 100%;
 }
-body .destak .title {
+body section#hero .destak .title {
   margin-top: 100px;
   text-align: center;
 }
-body .destak .title h1 {
-  margin: 0;
+body section#hero .destak .title h1 {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
 }
-body .destak .title h2 {
+body section#hero .destak .title h2 {
   font-size: 20px;
   color: #fff;
-  font-weight: light;
+  font-weight: lighter;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
+  color: #fff;
+}
+main .popular-places {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  max-width: 300px;
+  background-color: rgba(16, 25, 30, 0.5019607843);
+}
+main .section-title {
+  text-align: center;
+  margin: 100px 0;
+}
+main .section-title h2 {
+  font-size: 35px;
+}
+main .section-title h4 {
+  font-weight: lighter;
+  font-size: 16px;
+}
+main .places {
+  margin: 100px 0;
+}
+main .places .individual-place {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin-top: 60px;
+}
+main .places .individual-place .description {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(16, 25, 30, 0.5647058824);
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+main .places .individual-place .description .name {
+  display: flex;
+}
+main .places .individual-place .description p {
+  font-size: 14px;
+}
+main .places .individual-place:nth-child(1) {
+  background: url("/assets/images/teatro-municipal.webp") no-repeat;
+}
+main .places .individual-place:nth-child(2) {
+  background: url("/assets/images/arena-corinthians.webp") no-repeat;
+}
+main .places .individual-place:nth-child(3) {
+  background: url("/assets/images/natureza.webp") no-repeat;
+}
+main .places .individual-place:nth-child(4) {
+  background: url("/assets/images/jardim-botanico.webp") no-repeat;
+}
+
+@media (min-width: 768px) {
+  main .popular-places {
+    width: 100%;
+    max-width: unset;
+    padding: 0 50px;
+  }
+  main .popular-places .section-title {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  main .popular-places .section-title h2 {
+    font-size: 2.5em;
+  }
+  main .popular-places .section-title h3 {
+    font-size: 1.5em;
+  }
+  main .popular-places .places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0px;
+  }
+  main .popular-places .places .individual-place {
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  main .popular-places .places {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  main .popular-places .places .individual-place {
+    width: 400px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  main .popular-places .section-title h2 {
+    font-size: 2.5em;
+  }
+  main .popular-places .section-title h3 {
+    font-size: 2em;
+  }
+}
+main .why-choose-us {
+  background-color: #10191e;
+  text-align: center;
+  padding: 50px;
+}
+main .why-choose-us h2 {
+  font-size: 1.6em;
+}
+main .why-choose-us .reasons {
+  display: flex;
+  flex-direction: column;
+}
+main .why-choose-us .reasons .reason-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+main .why-choose-us .reasons .reason-item .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #252a2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .why-choose-us .reasons .reason-item.active {
+  border-bottom: 1px solid #8d9035;
+}
+main .why-choose-us .reasons .reason-item.active .icon {
+  background-color: #8d9035;
+}
+main .why-choose-us .reasons .reason-item h3 {
+  color: #8d9035;
+}
+main .why-choose-us .reasons .reason-item .reason-title h3 {
+  margin: 20px 0;
+}
+main .why-choose-us .reasons .reason-item .reason-title p {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  main .why-choose-us h2 {
+    font-size: 2.5em;
+  }
+  main .why-choose-us .reasons {
+    flex-direction: row;
+  }
+  main .why-choose-us .reasons .reason-item {
+    width: 400px;
+    padding: 20px;
+  }
+}
+@media (min-width: 992px) {
+  main .why-choose-us .reasons {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main .why-choose-us .reasons .reason-item {
+    cursor: pointer;
+  }
+}
+main .perfect-vacations {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+main .perfect-vacations .vacation-images {
+  display: flex;
+  justify-content: space-around;
+  /*div + div {
+          img + img  {
+              height: 150%;
+          }
+      }*/
+}
+main .perfect-vacations .vacation-images div img {
+  width: 100%;
+  margin-top: 10px;
+}
+main .perfect-vacations .vacation-images div:nth-child(1) {
+  width: 214px;
+}
+main .perfect-vacations .vacation-images div:nth-child(2) {
+  width: 160px;
+}
+main .perfect-vacations .vacation-images > div:nth-child(2) {
+  height: 44%;
+}
+main .perfect-vacations .vacation-text {
+  padding: 0 20px;
+}
+main .perfect-vacations .vacation-text h2 {
+  font-size: 1.6em;
+  margin-top: 50px;
+}
+main .perfect-vacations .vacation-text p {
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  main .perfect-vacations {
+    padding: 50px 10px;
+    flex-direction: row;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    margin-left: 15px;
+  }
+  main .perfect-vacations .vacation-text {
+    padding: 0 0 0 20px;
+  }
+  main .perfect-vacations .vacation-text h2 {
+    font-size: 2.1em;
+    margin-top: unset;
+  }
+}
+@media (min-width: 992px) {
+  main .perfect-vacations {
+    justify-content: center;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(1) {
+    width: 339px;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    width: 253px;
+  }
+  main .perfect-vacations .vacation-images > div:nth-child(2) {
+    height: 45%;
+  }
+  main .perfect-vacations .vacation-text {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  main .perfect-vacations .vacation-text h2 {
+    max-width: 550px;
+  }
+  main .perfect-vacations .vacation-text p {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1400px) {
+  main .perfect-vacations .vacation-text h2 {
+    max-width: 700px;
+  }
+  main .perfect-vacations .vacation-text p {
+    max-width: 600px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
