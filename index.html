@@ -12,26 +12,42 @@
 </head>
 
 <body>
-    <div class="overlay"></div>
     <header>
         <div class="header-content">
             <img src="./assets/icons/logo-mobile.svg" alt="Logo SP Click" />
 
+
             <div class="search show-tablet">
-                <img src="assets/icons/search_icon.svg" alt="Persquisar">
+                <img src="assets/icons/search_icon.svg" alt="Pesquisar">
                 <input type="text" placeholder="Pesquisar...">
             </div>
 
-            <svg class="show-tablet" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 36V33H42V36H6ZM6 25.5V22.5H42V25.5H6ZM6 15V12H42V15H6Z" fill="white" />
-            </svg>
+            <a href="#" aria-label="Menu" class="link-menu">
+                <svg class="show-mobile" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 36V33H42V36H6ZM6 25.5V22.5H42V25.5H6ZM6 15V12H42V15H6Z" fill="white" />
+                </svg>
+            </a>
+
+
+            <!--nav>ul>(li>a+img+h3)*6-->
+            <nav class="nav-desktop show-desktop">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">O Projeto</a></li>
+                    <li><a href="#">Lugares Populares</a></li>
+                    <li><a href="#">Teatros</a></li>
+                    <li><a href="#">Turismo</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
         </div>
 
 
 
         <div class="menu-links">
-            <a href="#" class="close-menu">
+            <a href="teste.html" class="close-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
                     <path
                         d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" />
@@ -50,6 +66,7 @@
             </nav>
         </div>
     </header>
+
     <section id="hero">
         <div class="destak">
             <div class="title">
@@ -60,13 +77,13 @@
     </section>
 
     <main>
-        <section class="popular-places max-width">
+        <section class="popular-places section-max-width">
             <div class="section-title">
                 <h2>Lugares Populares</h2>
-                <h4>
+                <h3>
                     Museu, galerias, pontos turísticos, esportes, restaurantes, entre
                     outros
-                </h4>
+                </h3>
             </div>
             <div class="places">
                 <div class="individual-place">
@@ -127,9 +144,9 @@
         <section class="why-choose-us">
             <h2>Razões para nos escolher</h2>
 
-            <div class="reasons">
+            <div class="reasons section-max-width">
 
-                <div class="reason-item active">
+                <div class="reason-item">
                     <div class="icon">
                         <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -198,7 +215,7 @@
 
             </div>
 
-            <div class="vacation-text">
+            <div class="vacation-text section-max-width">
                 <h2>Aqui fazemos umas férias perfeitas para você!</h2>
                 <hr class="custom-hr" />
                 <p>São Paulo, centro financeiro do Brasil, está entre as cidades mais populosas do mundo, com diversas
@@ -210,7 +227,122 @@
 
         </section>
 
+        <section class="explore-nature">
+
+            <div class="nature-title">
+                <h2>Aproveite a Natureza em SP</h2>
+                <hr class="custom-hr" />
+            </div>
+
+            <div class="nature-image">
+                <div class="image-texts">
+                    <div class="nature-destak">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugit laborum delectus facere
+                            ullam autem, voluptatem eius!</p>
+                    </div>
+
+                    <div class="nature-destak">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugit laborum delectus facere
+                            ullam autem, voluptatem eius!</p>
+                    </div>
+
+                    <div class="nature-destak">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum fugit laborum delectus facere
+                            ullam autem, voluptatem eius!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="testimonials section-max-width">
+
+            <div class="testimonials-title">
+                <h2>Depoimentos</h2>
+                <hr class="custom-hr">
+            </div>
+
+            <div class="testimonial-item">
+                <div class="testimonial-quote">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M36.25 28.75H46.25V18.75H36.25V28.75ZM13.75 28.75H23.75V18.75H13.75V28.75ZM39.125 42.5L44.125 32.5H32.5V15H50V33L45.25 42.5H39.125ZM16.625 42.5L21.625 32.5H10V15H27.5V33L22.75 42.5H16.625Z"
+                            fill="white" />
+                    </svg>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis tempora natus, quis voluptas
+                        repellendus cumque sed. Reprehenderit itaque provident deleniti ratione similique saepe nihil
+                        quae nobis illum corporis? Architecto, repellat.</p>
+                </div>
+                <img src="/assets/images/depoimento1.webp" alt="Cidade de São Paulo décadas atrás">
+            </div>
+
+            <div class="testimonial-item right">
+                <div class="testimonial-quote">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M36.25 28.75H46.25V18.75H36.25V28.75ZM13.75 28.75H23.75V18.75H13.75V28.75ZM39.125 42.5L44.125 32.5H32.5V15H50V33L45.25 42.5H39.125ZM16.625 42.5L21.625 32.5H10V15H27.5V33L22.75 42.5H16.625Z"
+                            fill="white" />
+                    </svg>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis tempora natus, quis voluptas
+                        repellendus cumque sed. Reprehenderit itaque provident deleniti ratione similique saepe nihil
+                        quae nobis illum corporis? Architecto, repellat.</p>
+                </div>
+                <img src="/assets/images/depoimento2.webp" alt="Prédios em São Paulo">
+            </div>
+
+        </section>
+
     </main>
+
+    <footer>
+        <div class="footer-info">
+            <a href="#" class="logo">
+                <img src="assets/icons/logo-desktop.svg" alt="Logo SP CLick">
+            </a>
+
+            <div class="links-and-contact">
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">O Projeto</a></li>
+                            <li><a href="#">Lugares Populares</a></li>
+                            <li><a href="#">Teatros</a></li>
+                            <li><a href="#">Turismo</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="contact">
+                    <h3>Contato</h3>
+                    <p>
+                        R. José Versolato, 101 - 12º andar <br />
+                        Centro<br />
+                        São Bernardo do Campo - SP<br />
+                        09750-730
+                    </p>
+                </div>
+
+                <div class="social-media">
+                    <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram SP Click"></a>
+                    <a href="#"><img src="assets/icons/linkedin-logo.svg" alt="Linkedin SP Click"></a>
+                    <a href="#"><img src="assets/icons/youtube.svg" alt="Youtube SP Click"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>2022 - Todos os direitos reservados - <a href="#">Política de Privacidade</a> - <a href="#">Termos
+                    Uso</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/why-choose.us.js"></script>
 </body>
 
 </html>

@@ -19,27 +19,10 @@ body {
   padding: 0;
   font-family: "Lato-Regular";
 }
-body .show-tablet,
-body .show-desktop {
+body .show-tablet, body .show-desktop {
   display: none;
 }
-body .overlay {
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3137254902);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-}
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6,
-body p {
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
   margin: 0;
 }
 body .custom-hr {
@@ -50,80 +33,157 @@ body .custom-hr {
   border-color: #bfbc37;
   background-color: #bfbc37;
 }
-body a {
+body .section-max-width {
+  max-width: 300px;
+  margin: 0 auto;
+}
+body .section-subtitle {
+  font-size: 1.5em;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
   color: #fff;
+}
+body a {
   text-decoration: none;
+  color: #fff;
   cursor: pointer;
 }
 body ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 body ul li {
   list-style: none;
 }
 
 @media (min-width: 768px) {
+  body .section-max-width {
+    max-width: 700px;
+  }
+  body .section-subtitle {
+    font-size: 2.5em;
+  }
   body .show-tablet {
     display: block;
   }
 }
-* {
-  box-sizing: border-box;
+@media (min-width: 1200px) {
+  body .section-max-width {
+    max-width: 1100px;
+  }
+  body .show-desktop {
+    display: block;
+  }
+  body .show-mobile {
+    display: none;
+  }
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Lato-Regular";
+@media (min-width: 1400px) {
+  body .section-max-width {
+    max-width: 1300px;
+  }
 }
-body .show-tablet,
-body .show-desktop {
-  display: none;
-}
-body .overlay {
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3137254902);
+body header {
+  height: 100px;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  display: none;
+  background-color: #161618;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  z-index: 3;
 }
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6,
-body p {
-  margin: 0;
+body header .header-content {
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-body .custom-hr {
-  width: 180px;
-  height: 2px;
-  margin: 0;
-  margin-top: 10px;
-  border-color: #bfbc37;
-  background-color: #bfbc37;
+body header .header-content .search {
+  position: relative;
 }
-body a {
+body header .header-content .search input {
+  width: 500px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 20px;
   color: #fff;
-  text-decoration: none;
-  cursor: pointer;
+  outline: 0;
+  border: none;
+  padding: 0 50px;
 }
-body ul {
+body header .header-content .search input::placeholder {
+  color: #fff;
+  font-size: 1.1em;
+}
+body header .header-content .search img {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 20px;
+}
+body header .header-content img {
+  width: 65px;
+}
+body header .header-content svg {
+  fill: #fff;
+}
+body header .menu-links {
+  position: fixed;
+  width: 300px;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  background-color: #cacad2;
+  transition: all ease-in 0.5s;
+}
+body header .menu-links > a {
+  margin: 15px;
+  width: 48px;
+  height: 48px;
+  float: right;
+}
+body header .menu-links ul {
+  margin: 150px 0;
+  text-align: center;
   padding: 0;
-  margin: 0;
+  font-size: 18px;
 }
-body ul li {
-  list-style: none;
+body header .menu-links ul li + li {
+  margin-top: 40px;
+}
+body header .menu-links ul li + li a {
+  color: #000;
+}
+body header.menu-open .menu-links {
+  right: 0;
 }
 
-@media (min-width: 768px) {
-  body .show-tablet {
-    display: block;
+@media (min-width: 1200px) {
+  body header .header-content .search input {
+    width: 300px;
+  }
+  body header .header-content .nav-desktop ul {
+    display: flex;
+  }
+  body header .header-content .nav-desktop ul li {
+    min-width: 100px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  body header .header-content .search input {
+    width: 450px;
+  }
+}
+@media (min-width: 1500px) {
+  body header .header-content .search input {
+    width: 500px;
   }
 }
 body section#hero {
@@ -137,7 +197,7 @@ body section#hero::before {
   height: 100%;
   position: absolute;
   content: "";
-  color: #fff;
+  color: #FFF;
   background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
 }
 body section#hero .destak {
@@ -150,7 +210,7 @@ body section#hero .destak {
   width: 100%;
 }
 body section#hero .destak .title {
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: center;
 }
 body section#hero .destak .title h1 {
@@ -164,6 +224,17 @@ body section#hero .destak .title h2 {
   font-weight: lighter;
 }
 
+@media (min-width: 768px) {
+  body section#hero .destak .title {
+    margin-top: 300px;
+  }
+  body section#hero .destak .title h1 {
+    font-size: 5em;
+  }
+  body section#hero .destak .title h2 {
+    font-size: 1.5em;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -171,30 +242,27 @@ main {
   color: #fff;
 }
 main .popular-places {
-  margin: 0 auto;
-  margin-bottom: 100px;
-  max-width: 300px;
   background-color: rgba(16, 25, 30, 0.5019607843);
 }
-main .section-title {
+main .popular-places .section-title {
   text-align: center;
-  margin: 100px 0;
+  margin: 50px 0;
 }
-main .section-title h2 {
-  font-size: 35px;
+main .popular-places .section-title h2 {
+  font-size: 2.1em;
 }
-main .section-title h4 {
+main .popular-places .section-title h3 {
   font-weight: lighter;
   font-size: 16px;
 }
 main .places {
-  margin: 100px 0;
+  margin: 50px 0;
 }
 main .places .individual-place {
   width: 100%;
   height: 350px;
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 main .places .individual-place .description {
   height: 160px;
@@ -204,6 +272,7 @@ main .places .individual-place .description {
   background-color: rgba(16, 25, 30, 0.5647058824);
   padding: 0 40px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 main .places .individual-place .description .name {
@@ -234,12 +303,17 @@ main .places .individual-place:nth-child(4) {
   main .popular-places .section-title {
     margin-bottom: 25px;
     margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   main .popular-places .section-title h2 {
     font-size: 2.5em;
   }
   main .popular-places .section-title h3 {
     font-size: 1.5em;
+    max-width: 500px;
   }
   main .popular-places .places {
     display: flex;
@@ -267,6 +341,7 @@ main .places .individual-place:nth-child(4) {
   }
   main .popular-places .section-title h3 {
     font-size: 2em;
+    max-width: unset;
   }
 }
 main .why-choose-us {
@@ -342,10 +417,10 @@ main .perfect-vacations .vacation-images {
   display: flex;
   justify-content: space-around;
   /*div + div {
-          img + img  {
-              height: 150%;
-          }
-      }*/
+      img + img  {
+          height: 150%;
+      }
+  }*/
 }
 main .perfect-vacations .vacation-images div img {
   width: 100%;
@@ -360,15 +435,14 @@ main .perfect-vacations .vacation-images div:nth-child(2) {
 main .perfect-vacations .vacation-images > div:nth-child(2) {
   height: 44%;
 }
-main .perfect-vacations .vacation-text {
-  padding: 0 20px;
-}
 main .perfect-vacations .vacation-text h2 {
-  font-size: 1.6em;
   margin-top: 50px;
+  font-size: 1.3em;
 }
 main .perfect-vacations .vacation-text p {
   padding-top: 20px;
+  font-size: 1em;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -383,7 +457,6 @@ main .perfect-vacations .vacation-text p {
     padding: 0 0 0 20px;
   }
   main .perfect-vacations .vacation-text h2 {
-    font-size: 2.1em;
     margin-top: unset;
   }
 }
@@ -407,6 +480,8 @@ main .perfect-vacations .vacation-text p {
 @media (min-width: 1200px) {
   main .perfect-vacations .vacation-text h2 {
     max-width: 550px;
+    font-size: 2.5em;
+    text-align: start;
   }
   main .perfect-vacations .vacation-text p {
     max-width: 500px;
@@ -418,6 +493,236 @@ main .perfect-vacations .vacation-text p {
   }
   main .perfect-vacations .vacation-text p {
     max-width: 600px;
+  }
+}
+main .explore-nature {
+  padding: 50px 0;
+  background-color: #10191e;
+}
+main .explore-nature .nature-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+main .explore-nature .nature-title h2 {
+  font-size: 1.5em;
+}
+main .explore-nature .nature-title:nth-child(2) {
+  margin-left: -100px;
+}
+main .explore-nature .nature-image {
+  width: 100%;
+  height: 878px;
+  background: url("/assets/images/parque-ibirapuera.webp") no-repeat;
+  background-position: -600px;
+  margin-top: 50px;
+}
+main .explore-nature .nature-image .image-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 140px 40px;
+}
+main .explore-nature .nature-image .image-texts .nature-destak {
+  max-width: 250px;
+  min-height: 100px;
+  background-color: rgba(204, 204, 204, 0.3137254902);
+  border-radius: 5px;
+  padding: 15px;
+}
+main .explore-nature .nature-image .image-texts .nature-destak:nth-child(2) {
+  align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+  main .explore-nature .nature-image {
+    background-position: unset;
+  }
+}
+@media (min-width: 992px) {
+  main .explore-nature .image-texts .nature-destak {
+    padding: 20px;
+  }
+  main .explore-nature .image-texts .nature-destak p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  main .explore-nature .nature-title h2 {
+    font-size: 2.5em;
+  }
+  main .explore-nature .image-texts {
+    max-width: 900px;
+  }
+}
+main .testimonials {
+  padding: 50px 0;
+}
+main .testimonials .testimonials-title h2 {
+  font-size: 1.5em;
+}
+main .testimonials .testimonial-item {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+main .testimonials .testimonial-item img {
+  width: 100%;
+  margin-top: 30px;
+}
+main .testimonials .testimonial-item.right {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  main .testimonials .testimonial-item {
+    flex-direction: row;
+  }
+  main .testimonials .testimonial-item img {
+    max-width: 350px;
+    max-height: 201px;
+    margin-top: 0;
+    margin-left: 50px;
+  }
+  main .testimonials .testimonial-item p {
+    font-size: 1.3em;
+  }
+  main .testimonials .testimonial-item.right {
+    flex-direction: row-reverse;
+  }
+  main .testimonials .testimonial-item.right img {
+    margin-right: 50px;
+    margin-left: unset;
+  }
+}
+@media (min-width: 1200px) {
+  main .testimonials .testimonials-title h2 {
+    font-size: 2.5em;
+  }
+  main .testimonials .testimonial-item img {
+    max-width: 500px;
+    max-height: 286px;
+  }
+}
+footer {
+  background: url("/assets/images/estrada-mobile.webp") no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+footer::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  color: #fff;
+  background-image: linear-gradient(#161618, 16161890);
+  z-index: 1;
+}
+footer .footer-info,
+footer .copyright {
+  z-index: 2;
+}
+footer .footer-info {
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-info .logo {
+  align-self: center;
+  margin-left: 10px;
+}
+footer .footer-info .links-and-contact {
+  margin-top: 100px;
+  width: 100%;
+}
+footer .footer-info .links-and-contact .footer-links li {
+  margin-top: 10px;
+}
+footer .footer-info .links-and-contact h3 {
+  font-size: 1.6em;
+}
+footer .footer-info .links-and-contact .contact {
+  margin-top: 40px;
+}
+footer .footer-info .links-and-contact .contact p {
+  padding-top: 10px;
+}
+footer .footer-info .social-media {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+footer .footer-info .social-media a img {
+  height: 50px;
+}
+footer .copyright {
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    background: url("/assets/images/estrada-desktop.webp") no-repeat;
+    background-position: right;
+    background-color: #10191e;
+    background-size: 100%;
+  }
+  footer .footer-info {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: unset;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: unset;
+  }
+  footer .footer-info .logo img {
+    width: 70%;
+  }
+  footer .footer-info .links-and-contact {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: unset;
+  }
+  footer .footer-info .links-and-contact .contact {
+    margin-top: unset;
+    margin-left: 50px;
+  }
+  footer .footer-info .links-and-contact .contact p {
+    padding-top: 10px;
+  }
+  footer .footer-info .social-media {
+    margin: unset;
+  }
+  footer .footer-info .social-media a img {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer-info {
+    max-width: 1100px;
+  }
+  footer .footer-info .logo {
+    width: 30%;
+  }
+  footer .footer-info .links-and-contact .contact {
+    margin-left: unset;
+  }
+  footer .footer-info .social-media {
+    display: flex;
   }
 }
 
