@@ -160,6 +160,9 @@ body header .menu-links ul li + li {
 body header .menu-links ul li + li a {
   color: #000;
 }
+body header .menu-links li a {
+  color: #000;
+}
 body header.menu-open .menu-links {
   right: 0;
 }
@@ -197,7 +200,7 @@ body section#hero::before {
   height: 100%;
   position: absolute;
   content: "";
-  color: #FFF;
+  color: #fff;
   background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
 }
 body section#hero .destak {
@@ -223,6 +226,40 @@ body section#hero .destak .title h2 {
   color: #fff;
   font-weight: lighter;
 }
+body section#hero .links {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  background-color: rgba(19, 28, 33, 0.5019607843);
+  overflow: auto;
+  padding: 0 25px;
+}
+body section#hero .links .link-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  min-width: 200px;
+  cursor: pointer;
+}
+body section#hero .links .link-item svg {
+  margin-right: 10px;
+}
+body section#hero .links .link-item.active {
+  border-bottom: 2px solid #bfbc37;
+}
+body section#hero .links .link-item.active svg path {
+  fill: #bfbc37;
+}
+body section#hero .links .link-item h3 {
+  font-size: 1em;
+}
+body section#hero .links .link-item h4 {
+  font-size: 0.8em;
+}
 
 @media (min-width: 768px) {
   body section#hero .destak .title {
@@ -233,6 +270,11 @@ body section#hero .destak .title h2 {
   }
   body section#hero .destak .title h2 {
     font-size: 1.5em;
+  }
+}
+@media (min-width: 992px) {
+  section#hero .destak .links {
+    justify-content: space-around;
   }
 }
 main {
@@ -614,6 +656,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  background-size: cover;
 }
 footer::before {
   width: 100%;
@@ -621,7 +664,7 @@ footer::before {
   content: "";
   position: absolute;
   color: #fff;
-  background-image: linear-gradient(#161618, 16161890);
+  background-image: linear-gradient(rgba(22, 22, 24, 0.5647058824), rgba(22, 22, 24, 0.2509803922));
   z-index: 1;
 }
 footer .footer-info,
