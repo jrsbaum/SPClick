@@ -71,6 +71,11 @@ body {
           }
         }
       }
+      li {
+        a {
+          color: #000;
+        }
+      }
     }
     &.menu-open {
       .menu-links {
@@ -79,7 +84,6 @@ body {
     }
   }
 }
-
 
 @media (min-width: 1200px) {
   body {
