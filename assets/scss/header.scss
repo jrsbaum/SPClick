@@ -70,10 +70,10 @@ body {
             color: #000;
           }
         }
-      }
-      li {
-        a {
-          color: #000;
+        li {
+          a {
+            color: #000;
+          }
         }
       }
     }
@@ -99,7 +99,7 @@ body {
             display: flex;
             li {
               min-width: 100px;
-              margin-left: 20px;
+              margin: 15px;
             }
           }
         }

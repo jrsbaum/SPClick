@@ -19,10 +19,17 @@ body {
   padding: 0;
   font-family: "Lato-Regular";
 }
-body .show-tablet, body .show-desktop {
+body .show-tablet,
+body .show-desktop {
   display: none;
 }
-body h1, body h2, body h3, body h4, body h5, body h6, body p {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
   margin: 0;
 }
 body .custom-hr {
@@ -160,7 +167,7 @@ body header .menu-links ul li + li {
 body header .menu-links ul li + li a {
   color: #000;
 }
-body header .menu-links li a {
+body header .menu-links ul li a {
   color: #000;
 }
 body header.menu-open .menu-links {
@@ -176,7 +183,7 @@ body header.menu-open .menu-links {
   }
   body header .header-content .nav-desktop ul li {
     min-width: 100px;
-    margin-left: 20px;
+    margin: 15px;
   }
 }
 @media (min-width: 1400px) {
@@ -459,10 +466,10 @@ main .perfect-vacations .vacation-images {
   display: flex;
   justify-content: space-around;
   /*div + div {
-      img + img  {
-          height: 150%;
-      }
-  }*/
+            img + img  {
+                height: 150%;
+            }
+        }*/
 }
 main .perfect-vacations .vacation-images div img {
   width: 100%;
